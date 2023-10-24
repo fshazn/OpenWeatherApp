@@ -1,0 +1,89 @@
+.main-container {
+  width: 18rem;
+  padding: 1rem;
+  position: relative;
+  background: #1f1f1f;
+  border-radius: 50px;
+  border: "1px white solid";
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.weather-icon {
+  align-items: center;
+}
+
+.weather-icon img{
+    width: 8rem;
+    height: auto;
+}
+
+.weather-icon p{
+    font-size: 40px;
+    margin: 0;
+}
+
+.weather-details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .weather-card {
+    background-color: #404040;
+    padding: 10px;
+    height: 100px;
+
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  .weather-card temperature-card{
+    
+  }
+  .temperature-card img{
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+  
+  humidity-card {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  
+  wind-card {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  rain-card {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+  
+  .description-card {
+    background-color: #607d8b;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+  .top-row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .middle-row {
+    font-size: 40px;
+    height: 40px;
+  }
