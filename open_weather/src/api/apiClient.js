@@ -8,25 +8,13 @@ const instance = axios.create({
   },
 });
 
-const fetchCurrentWeather = async () => {
-  try {
-    const response = await instance.get("/weather", {
-      params: {
-        q: "Colombo",
-      },
-    });
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const getWeatherData = async (latitude, longitude) => {
   try {
     const response = await instance.get("/weather", {
       params: {
         lat: latitude,
         lon: longitude,
+        units: "metric",
       },
     });
     return response.data;
@@ -35,4 +23,18 @@ const getWeatherData = async (latitude, longitude) => {
   }
 };
 
-export { fetchCurrentWeather, getWeatherData };
+const getForecast = async (latitude, longitude) => {
+  try {
+    const response = await instance.get("/forecast", {
+      params: {
+        lat: latitude,
+        lon: longitude,
+        units: "metric",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export { getWeatherData, getForecast };

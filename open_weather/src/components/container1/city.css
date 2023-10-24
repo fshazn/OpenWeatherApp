@@ -1,10 +1,12 @@
 .main-container {
-  width: 18rem;
+  width: 25rem;
+  height: auto;
+  min-height: 100vh;
   padding: 1rem;
   position: relative;
   background: #1f1f1f;
   border-radius: 50px;
-  border: "1px white solid";
+  /* border: 1px white solid; */
 }
 
 .description {
@@ -14,6 +16,7 @@
   color: white;
   font-size: 16px;
   font-weight: 400;
+  margin-top: 3rem;
 }
 
 .weather-icon {
@@ -35,26 +38,21 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
   }
   
   .weather-card {
     background-color: #404040;
     padding: 10px;
-    height: 100px;
-
+    width: 90%;
+    height: 9rem;
     border-radius: 10px;
     color: white;
     text-align: center;
   }
-  
-  .weather-card temperature-card{
-    
-  }
   .temperature-card img{
-    display: flex;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   
   humidity-card {
@@ -72,18 +70,28 @@
     grid-row: 2 / span 1;
   }
   
-  .description-card {
-    background-color: #607d8b;
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-  }
   .top-row{
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
     align-items: center;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .middle-row {
-    font-size: 40px;
-    height: 40px;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 1rem;
   }
+
+  .bottom-row{
+    display: flex;
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 11px;
+    justify-content: space-between;
+}
+
+*{
+  margin: 0;
+}
