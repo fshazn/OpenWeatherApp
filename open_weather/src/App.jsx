@@ -1,27 +1,36 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { fetchCurrentWeather, getWeatherData } from "./api/apiClient";
-import City from './components/container1/City'
+import Dashboard from "./pages/Dashboard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import protectedRoute from "./components/protectedRoute";
+import WeeklyWeather from "./pages/WeeklyWeather";
 
 function App() {
-  const [currentWeather, setCurrentWeather] = useState(null);
-  const [weatherData, setWeatherData] = useState(null);
-
-  useEffect(() => {
-    fetchCurrentWeather().then((data) => {
-      setCurrentWeather(data);
-    });
-
-    getWeatherData(6.9271, 79.8612).then((data) => {
-      setWeatherData(data);
-    });
-  }, []);
-
   return (
     <>
-      {/* <p>{JSON.stringify(currentWeather)}</p>
-      <h1>{JSON.stringify(weatherData)}</h1> */}
-      <City/>
+      <div className="app">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route
+              path="/dashboard"
+              element={
+                <protectedRoute>
+                  <Dashboard />
+                </protectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/weekforecast"
+              element={
+                <protectedRoute>
+                  <WeeklyWeather />
+                </protectedRoute>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }

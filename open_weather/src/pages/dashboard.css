@@ -1,0 +1,48 @@
+.dashboard-container{
+    background-image: url('../assets/background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .dashboard-left-container{
+    margin: 2rem;
+  }
+
+  .forecast-grid{
+    display: flex;
+ justify-content: space-between;
+    
+  }
+
+  .view h3{
+    font-size: 14px;
+    color: white;
+  }
+
+  .view{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .view img{
+    height: 20px;
+    width: 20px;
+    color: white;
+  }
+
+  .dashboard-right-container{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+  }
+
+  
+ 

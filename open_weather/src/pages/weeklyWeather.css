@@ -1,0 +1,23 @@
+.weekly-forecast-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 2rem;
+  }
+
+  .weekly-container{
+    background-image: url('../assets/background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .weekly-forecast-grid{
+    display: flex;
+    gap: 2rem;
+  }
